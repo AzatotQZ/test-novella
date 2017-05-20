@@ -15,7 +15,7 @@ label start:
     #play sound ""
     ivan "Первое сентября, время 7:30 утра. Я проснулся от того, что прозвонил будильник. Встал, умылся – сделал обычные утренние дела, собрался и вышел на улицу. Сегодня начинается первый учебный день в колледже в который я поступил. Поскольку это первый день, то опаздывать нельзя."
     $ persistent.sk1 = "yes"
-    scene bus with dissolve
+    scene bus with pushleft
     $ persistent.sk4 = "yes"
     ivan "Я дошел до остановки, дождался маршрутки, к счастью она была пустой. Сев в неё направился на место назначения, хорошо, что ехать не далеко. Маршрутка остановилась практически у дверей колледжа, около которого уже собралась толпа студентов-первокурсников."
     scene college with dissolve
@@ -131,6 +131,7 @@ label start:
       "Смолоть какую-нибудь чушь":
         $ test3 = +3
         jump navigate2
+    return
 
 label navigate: #метка для навигации
     hide alex 
@@ -143,6 +144,7 @@ label navigate: #метка для навигации
       "Пойти в магазин":
         $ test3 = +3
         jump secondroot
+    return
 
 label navigate2: 
     hide alex 
@@ -155,6 +157,7 @@ label navigate2:
       "Пойти в магазин":
         $ test3 = +3
         jump secondroot
+    return
     
 label oneroot: #рут не попав в столовую==закончен
     $ persistent.sk8 = "yes"
@@ -178,6 +181,7 @@ label oneroot: #рут не попав в столовую==закончен
     $ persistent.sk3 = "yes"
     $ persistent.sk10 = "yes"
     jump credits
+    return
 
 label secondroot: #рут_в магазине
     scene 3_floor with dissolve
@@ -244,6 +248,7 @@ label secondroot: #рут_в магазине
       "Идти медленноее":
         "Выйдя из магазина мы решили пойти по медленнее, хотя опоздать на пару в первый день было слишком, но мы решили пообщаться по дольше по пути в колледж."
         jump thirdroot
+    return
 
 label after_market: #после магазина продолжение рута 2
     scene magaz with dissolve 
@@ -296,6 +301,7 @@ label after_market: #после магазина продолжение рута
     $ persistent.sk2 = "yes"
     $ persistent.sk3 = "yes"
     jump credits
+    return
 
 label end: #общая концовка
     scene 302 with dissolve
@@ -306,6 +312,7 @@ label end: #общая концовка
     $ persistent.sk2 = "yes"
     $ persistent.sk3 = "yes"
     jump credits
+    
 
 return
 
