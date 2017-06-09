@@ -1,0 +1,49 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00action_menu.rpy", line 100, in __call__
+    raise Exception("%r is not a screen or a label." % orig_screen)
+Exception: u'help' is not a screen or a label.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\ast.py", line 814, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\python.py", line 1719, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 30, in <module>
+    ui.interact()
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\ui.py", line 285, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\core.py", line 2526, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\core.py", line 3204, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\layout.py", line 960, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\layout.py", line 960, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\layout.py", line 960, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\screen.py", line 651, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\layout.py", line 960, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\layout.py", line 960, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\behavior.py", line 889, in event
+    return handle_click(self.clicked)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\behavior.py", line 824, in handle_click
+    rv = run(action)
+  File "C:\Users\USER\Desktop\Gamedev\renpy-6.99.12.4-sdk\renpy\display\behavior.py", line 306, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_menu.rpy", line 100, in __call__
+    raise Exception("%r is not a screen or a label." % orig_screen)
+Exception: u'help' is not a screen or a label.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.12.4.2187
+Один день из жизни студента 0.23

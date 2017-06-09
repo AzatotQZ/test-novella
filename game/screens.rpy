@@ -333,7 +333,7 @@ screen navigation():
         if renpy.variant("pc"):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Управление") action ShowMenu("help")
+            #textbutton _("Управление") action ShowMenu("help")
 
             ## The quit button is banned on iOS and unnecessary on Android.
             textbutton _("Выход") action Quit(confirm=not main_menu)
@@ -973,128 +973,128 @@ style history_label_text:
 ## screens (keyboard_help, mouse_help, and gamepad_help) to display the actual
 ## help.
 
-screen help():
+# screen help():
 
-    tag menu
+#     tag menu
 
-    default device = "keyboard"
+#     default device = "keyboard"
 
-    use game_menu(_("Помощь"), scroll="viewport"):
+#     use game_menu(_("Помощь"), scroll="viewport"):
 
-        style_prefix "help"
+#         style_prefix "help"
 
-        vbox:
-            spacing 15
+#         vbox:
+#             spacing 15
 
-            hbox:
+#             hbox:
 
-                textbutton _("Клавиатура") action SetScreenVariable("device", "keyboard")
-                textbutton _("Мышь") action SetScreenVariable("device", "mouse")
+#                 textbutton _("Клавиатура") action SetScreenVariable("device", "keyboard")
+#                 textbutton _("Мышь") action SetScreenVariable("device", "mouse")
 
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+#                 if GamepadExists():
+#                     textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
-            if device == "keyboard":
-                use keyboard_help
-            elif device == "mouse":
-                use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
-
-
-screen keyboard_help():
-
-    hbox:
-        label _("Enter")
-        text _("Переключение диалогов и активация меню.")
-
-    hbox:
-        label _("Space")
-        text _("Переключение диалогов до выбора")
-
-    hbox:
-        label _("Стредки")
-        text _("Навигация по интерфейсу")
-
-    hbox:
-        label _("Escape")
-        text _("Выход в меню.")
-
-    hbox:
-        label _("Ctrl")
-        text _("Пропуск диалогов.")
-
-    hbox:
-        label _("Tab")
-        text _("Переключение режимов пропуска диалогов.")
-
-    hbox:
-        label _("Page Up")
-        text _("Переключение на следующий диалог.")
-
-    hbox:
-        label _("Page Down")
-        text _("Переключение на предыдущий диалог.")
-
-    hbox:
-        label "H"
-        text _("Скрыть интерфейс.")
-
-    hbox:
-        label "S"
-        text _("Создание скришота.")
+#             if device == "keyboard":
+#                 use keyboard_help
+#             elif device == "mouse":
+#                 use mouse_help
+#             elif device == "gamepad":
+#                 use gamepad_help
 
 
-screen mouse_help():
+# screen keyboard_help():
 
-    hbox:
-        label _("Левая клавиша")
-        text _("Переключение диалогов и активация меню.")
+#     hbox:
+#         label _("Enter")
+#         text _("Переключение диалогов и активация меню.")
 
-    hbox:
-        label _("Средняя клавиша")
-        text _("Скрытие интерфейса.")
+#     hbox:
+#         label _("Space")
+#         text _("Переключение диалогов до выбора")
 
-    hbox:
-        label _("Правая клавиша")
-        text _("Выход в меню.")
+#     hbox:
+#         label _("Стредки")
+#         text _("Навигация по интерфейсу")
 
-    hbox:
-        label _("Прокрутка колеса вверх")
-        text _("Возвращение к более раннему диалогу.")
+#     hbox:
+#         label _("Escape")
+#         text _("Выход в меню.")
 
-    hbox:
-        label _("Прокрутка колеса вниз")
-        text _("Возвращение к более позднему диалогу.")
+#     hbox:
+#         label _("Ctrl")
+#         text _("Пропуск диалогов.")
+
+#     hbox:
+#         label _("Tab")
+#         text _("Переключение режимов пропуска диалогов.")
+
+#     hbox:
+#         label _("Page Up")
+#         text _("Переключение на следующий диалог.")
+
+#     hbox:
+#         label _("Page Down")
+#         text _("Переключение на предыдущий диалог.")
+
+#     hbox:
+#         label "H"
+#         text _("Скрыть интерфейс.")
+
+#     hbox:
+#         label "S"
+#         text _("Создание скришота.")
 
 
-screen gamepad_help():
+# screen mouse_help():
 
-    hbox:
-        label _("Right Trigger\nA/Bottom Button")
-        text _("Advance dialogue and activates the interface.")
+#     hbox:
+#         label _("Левая клавиша")
+#         text _("Переключение диалогов и активация меню.")
 
-    hbox:
-        label ("Left Trigger\nLeft Shoulder")
-        text _("Roll back to earlier dialogue.")
+#     hbox:
+#         label _("Средняя клавиша")
+#         text _("Скрытие интерфейса.")
 
-    hbox:
-        label _("Right Shoulder")
-        text _("Roll forward to later dialogue.")
+#     hbox:
+#         label _("Правая клавиша")
+#         text _("Выход в меню.")
 
-    hbox:
-        label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
+#     hbox:
+#         label _("Прокрутка колеса вверх")
+#         text _("Возвращение к более раннему диалогу.")
 
-    hbox:
-        label _("Start, Guide")
-        text _("Access the game menu.")
+#     hbox:
+#         label _("Прокрутка колеса вниз")
+#         text _("Возвращение к более позднему диалогу.")
 
-    hbox:
-        label _("Y/Top Button")
-        text _("Hides the user interface.")
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+# screen gamepad_help():
+
+#     hbox:
+#         label _("Right Trigger\nA/Bottom Button")
+#         text _("Advance dialogue and activates the interface.")
+
+#     hbox:
+#         label ("Left Trigger\nLeft Shoulder")
+#         text _("Roll back to earlier dialogue.")
+
+#     hbox:
+#         label _("Right Shoulder")
+#         text _("Roll forward to later dialogue.")
+
+#     hbox:
+#         label _("D-Pad, Sticks")
+#         text _("Navigate the interface.")
+
+#     hbox:
+#         label _("Start, Guide")
+#         text _("Access the game menu.")
+
+#     hbox:
+#         label _("Y/Top Button")
+#         text _("Hides the user interface.")
+
+#     textbutton _("Calibrate") action GamepadCalibrate()
 
 
 style help_button is gui_button
