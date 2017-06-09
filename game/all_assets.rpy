@@ -20,10 +20,13 @@ init:
     image cabinet_108 = "images/bg/bg_cab_108.png"
     image 302 = "images/bg/bg_302.png"
     image dressroom = "images/bg/bg_dressroom.png"
+    image dressroom2 = "images/bg/bg_dressroom2.png"
     image stairs = "images/bg/bg_stairs.png"
     image 3_floor = "images/bg/bg_3_floor.png"
     image magaz = "images/bg/bg_magaz.png"
     image stol = "images/bg/bg_stol.png"
+    image cabinet_206 = "images/bg/bg_cabinet_206.png"
+    image stairs2 = "images/bg/bg_stairs2.png"
     # Описание спрайтов персонажей
     image ivan = "images/sprites/ivan.png"
     image anna = "images/sprites/anna.png"
