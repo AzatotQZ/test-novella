@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/gallery.rpy", line 3: unexpected indent
-        g.transition = dissolve
-        ^
-    
+File "game/music_room.rpy", line 10: frame expects a non-empty block.
+    frame:  
+            ^
 
-Ren'Py Version: Ren'Py 6.99.12.3.2123
+Ren'Py Version: Ren'Py 6.99.12.4.2187
