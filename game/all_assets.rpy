@@ -1,8 +1,6 @@
-#init -2 :
-    #$ qm_togle = False
 init:
     # Описание персонажей
-    define maria = Character("Мария", color="#FFFFE0") #, who_font = "fonts/georgia.ttf) 
+    define maria = Character("Мария", color="#FFFFE0")
     define alice = Character("Алиса", color="#FF4500")
     define anna = Character("Анна", color="#4169E1")
     define ivan = Character("Иван", color="#8B0000")
