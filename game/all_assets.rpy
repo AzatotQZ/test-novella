@@ -25,6 +25,7 @@ init:
     image stol = "images/bg/bg_stol.png"
     image cabinet_206 = "images/bg/bg_cabinet_206.png"
     image stairs2 = "images/bg/bg_stairs2.png"
+    image street = "images/bg/bg_street.png"
     # Описание спрайтов персонажей
     image ivan = "images/sprites/ivan.png"
     image anna = "images/sprites/anna.png"

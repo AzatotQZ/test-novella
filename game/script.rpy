@@ -10,6 +10,7 @@ label start:
     #stop music fadeout 1
     #$ renpy.pause(2.0, hard = True)
     #play music "music/" fadeout 1 loop
+    play music "music/game.mp3" fadeout 5.0 loop
     $ persistent.sk2 = "yes"
     $ persistent.sk3 = "yes"
     scene room with dissolve
@@ -362,6 +363,7 @@ label concert: # концерт и 1 концовка (хорошая)
     hide anna
     scene college with pushleft
     "Девушки дружно хихикнули. Мы постояли так еще немного, а потом попрощавшись, разошлись в разные стороны по домам. Я пошел вместе с Аней, потому что нам было с ней по пути, так как мы жили с ней практически рядом. Маше и Алисе было не по пути, и поэтому каждый пошел своей дорогой, одному Диме нужно было на подработку."
+    scene street with pushleft
     "Итак, мы с Аней двигались домой, говоря о том, что нам понравилось или не понравилось в колледже за сегодняшний день."
     show ivan at Position(xalign = 0.6)
     ivan "Ну и как тебе сегодня было тут?"
@@ -395,10 +397,12 @@ label concert: # концерт и 1 концовка (хорошая)
     hide anna
     show ivan at Position(xalign = 0.6)
     ivan "Окей, босс."
+    play music "music/bad_ending.mp3" fadeout 2.0 loop
     "За разговором время пролетело незаметно и вот мы уже оказались около ее дома. Попрощавшись с Аней, я направился к себе домой. Так и закончился мой первый день. Один день из жизни студента."
     jump credits 
 
 label concert2: # концерт и 2 концовка (плохая)
+    scene hall with dissolve 
     show ivan at Position(xalign = 0.5)
     ivan "Нет, не сегодня, не хочу. Не для меня это."
     hide ivan
@@ -416,18 +420,22 @@ label concert2: # концерт и 2 концовка (плохая)
     hide anna
     show ivan at Position(xalign = 0.6)
     ivan "Ладно, хорошо, тогда до завтра."
-    "Мы все попрощались. Я конечно понимал, что не хорошо так поступать, да и перед друзьями было немного стыдно, но я действительно не любил всех этих шумных собраний. Я вышел в холл, оделся и по быстрее направился домой."
+    "Мы все попрощались. Я конечно понимал, что не хорошо так поступать, да и перед друзьями было немного стыдно, но я действительно не любил всех этих шумных собраний."
+    scene dressroom with dissolve
+    "Я вышел в холл, оделся и по быстрее направился домой."
+    scene street with dissolve
+    scene room with dissolve
+    play music "music/good_ending.mp3" fadeout 4.0 loop
     "Придя домой я подумал о том, что все-таки нужно было остаться, но было уже поздно думать о таком. Я мысленно пролистал в голове то, что произошло за сегодня и сел за компьютер. Так закончился мой первый день. Один день из жизни студента."
     jump credits
-
-
-return
+    return
 
 init:
     transform txt_up:
       yalign 1.5
       linear 15.0 yalign-1.5  
 label credits:
+    stop music
     scene black with dissolve
     show text "Идея - Regis (Сергей Заварницын) и Hollow48 (Николай Денисюк) {p} Код - Regis {p} Арты - Owl {p} Программная среда разработки - RenPy {p} За тестирование спасибо: Almeanay, Belka, Franku, Owl {p} Всем спасибо! {p} Все персонажи являются вымышленными и любое совпадение с реально живущим или когда-либо жившими являются оошибочными. {p} The end {p}" at txt_up
     pause 15

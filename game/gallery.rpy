@@ -5,7 +5,7 @@ init python:
 #menu gallery
 screen gallery:
     tag menu
-    add "images/bg/bg_black.png"
+    add "images/bg/bg_menu.png"
     frame:
         style_group "mm"
         xalign .50
@@ -58,7 +58,7 @@ screen character:
  # create bttons for picture
              
     tag menu 
-    add "images/gallery/fong.png"
+    add "images/bg/bg_white.png"
     grid 3 3:
         xfill True
         yfill True
@@ -74,6 +74,7 @@ screen character:
 
    # textbutton "Следующая страница" action ShowMenu("character2") xalign 0.85 yalign 0.99
     textbutton "Назад" action ShowMenu("gallery") xalign 0.5 yalign 0.99
+    #play music "music/gallery.mp3" fadeout 2.0 loop
 
 # menu illustartion
 
@@ -116,8 +117,8 @@ screen illustration:
             g.image("images/gallery/fong.png", "images/gallery/Illustration/sk18.png")
 
     tag menu 
-    #add "images/gallery/fong.png"
-    add "black"
+    add "images/bg/bg_white.png"
+    #add "black"
     grid 3 3:
         xfill True
         yfill True
@@ -161,8 +162,8 @@ screen illustration2:
             g.image("images/gallery/fong.png", "images/gallery/fong.png")
 
     tag menu 
-    #add "images/gallery/fong.png"
-    add "black"
+    add "images/bg/bg_white.png"
+    #add "black"
     grid 3 2:
         xfill True
         yfill True
