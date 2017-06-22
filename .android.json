@@ -1,0 +1,1 @@
+{"layout": null, "name": "One day student", "package": "redhands.com", "orientation": "sensorLandscape", "include_pil": false, "expansion": false, "source": false, "icon_name": "One day student", "version": "0242", "target_version": 14, "permissions": ["VIBRATE", "INTERNET"], "include_sqlite": false, "store": "none", "numeric_version": "242"}
